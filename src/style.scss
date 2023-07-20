@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap");
+
+$font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$title-font: "Nunito", sans-serif;
+
+$title-size: 2.5rem;
+$subtitle-size: 1.5rem;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: $font;
+}
+
+// Container
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+
+@media (min-width: 920px) {
+  .container {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+}
+
+// Navbar
+nav,
+nav ul {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li:not(:last-of-type) {
+    padding-right: 1rem;
+  }
+
+  // Reset default styling on links
+  li a:link {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+// Hero
+.hero {
+  display: flex;
+
+  // Add space
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  // Text
+  color: white;
+  font-family: $title-font;
+  text-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+
+  // Background image (50% brightness)
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.pexels.com/photos/2586067/pexels-photo-2586067.jpeg"); // Image
+  background-size: cover;
+  background-position: center;
+
+  hgroup {
+    max-width: 400px;
+
+    // Title
+    h1 {
+      font-size: $title-size;
+      margin-bottom: 1rem;
+    }
+
+    // Subtitle
+    h2 {
+      font-size: $subtitle-size;
+    }
+  }
+}
+
+// Grid
+
+row {
+  display: flex;
+  flex-flow: row wrap;
+}
