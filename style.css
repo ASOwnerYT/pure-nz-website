@@ -67,7 +67,34 @@ nav li a:link {
   font-size: 1.5rem;
 }
 
-row {
+.row,
+.col {
   display: flex;
+}
+
+.row {
   flex-flow: row wrap;
+}
+
+.col {
+  flex-flow: column wrap;
+}
+
+.stats {
+  color: white;
+  background-color: #0a0a0a;
+}
+
+.stats h1 {
+  margin-bottom: 1rem;
+  font-size: 5rem;
+}
+
+.stats .col {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+  padding: 2.5rem;
+  max-width: 15rem;
 }
