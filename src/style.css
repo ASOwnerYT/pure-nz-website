@@ -6,6 +6,16 @@
 
 :root {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Colours light */
+  --text-light: black;
+  --accent-light: #00A6FB;
+  --bg-light: white;
+
+  /* Colors dark */
+  --text-dark: white;
+  --accent-dark: #00A6FB;
+  --bg-dark: #051923;
 }
 
 .container {
