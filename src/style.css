@@ -1,23 +1,38 @@
+/*
+100% Pure NZ website
+Author: John-Allan Lambert
+2023
+*/
+
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@700;900&display=swap");
+
+/* Reset default margin/padding */
 * {
   margin: 0;
   padding: 0;
 }
 
+/*
+* Body (root)
+*/
 :root {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
   /* Colours light */
   --text-light: black;
-  --accent-light: #00A6FB;
+  --accent-light: #00a6fb;
   --bg-light: white;
 
   /* Colors dark */
   --text-dark: white;
-  --accent-dark: #00A6FB;
+  --accent-dark: #00a6fb;
   --bg-dark: #051923;
 }
 
+/*
+* Constrained container
+*/
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -33,50 +48,88 @@
     padding-right: 70px;
   }
 }
-nav,
-nav ul {
-  display: flex;
-}
 
-nav {
-  justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-nav ul {
-  list-style-type: none;
-}
-nav li:not(:last-of-type) {
-  padding-right: 1rem;
-}
-nav li a:link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.hero {
-  display: flex;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
-  color: white;
-  font-family: "Nunito", sans-serif;
-  text-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+/* Header section (navbar and hero) */
+header {
+  color: var(--text-dark);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url("https://images.pexels.com/photos/2586067/pexels-photo-2586067.jpeg");
   background-size: cover;
   background-position: center;
 }
+
+/*
+* Navbar 
+*/
+nav,
+nav ul,
+nav ul li {
+  display: flex;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Reset default styling on lists */
+nav ul {
+  list-style-type: none;
+}
+
+/* Verticially center nav items */
+nav li {
+  align-items: center;
+}
+
+/* Padding betweeen nav items */
+nav li:not(:last-of-type) {
+  padding-right: 1rem;
+}
+
+/* Reset default styling on links */
+nav li a:link,
+nav li a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Underline links on hover */
+nav li a:hover {
+  text-decoration: underline;
+}
+
+/* 
+* Hero 
+*/
+.hero {
+  display: flex;
+  padding-top: 6rem;
+  padding-bottom: 10rem;
+  font-family: "Nunito", sans-serif;
+  text-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Restrict width on titles */
 .hero hgroup {
   max-width: 400px;
 }
+
+/* Title/subtitle styling */
 .hero hgroup h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
+
 .hero hgroup h2 {
   font-size: 1.5rem;
 }
 
+/*
+* Grid 
+*/
 .row,
 .col {
   display: flex;
@@ -90,9 +143,18 @@ nav li a:link {
   flex-flow: column wrap;
 }
 
+/*
+Statistic section
+*/
 .stats {
-  color: white;
-  background-color: #0a0a0a;
+  color: var(--text-dark);
+  background-color: var(--bg-dark);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.stats .row {
+  justify-content: space-between;
 }
 
 .stats h1 {
@@ -104,7 +166,5 @@ nav li a:link {
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin: auto;
-  padding: 2.5rem;
   max-width: 15rem;
 }
