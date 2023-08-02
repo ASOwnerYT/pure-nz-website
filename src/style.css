@@ -28,6 +28,26 @@ Author: John-Allan Lambert
   --text-dark: white;
   --accent-dark: #00a6fb;
   --bg-dark: #051923;
+
+  /* Spacing */
+  --section-spacing: 6rem;
+  --spacing: 3rem;
+}
+
+/* Typography */
+h1,
+h2 {
+  font-family: "Nunito", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 /*
@@ -50,6 +70,13 @@ Author: John-Allan Lambert
 }
 
 /*
+* Elements
+*/
+.rounded {
+  border-radius: 0.5rem;
+}
+
+/*
 * Sections
 */
 /* Header section (navbar and hero) */
@@ -61,15 +88,16 @@ header {
   background-position: center;
 }
 
+/* Section (adds spacing to bottom) */
 section {
-  margin-bottom: 3rem;
+  margin-bottom: var(--section-spacing);
 }
 
 footer {
   color: var(--text-dark);
   background-color: var(--bg-dark);
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
 }
 
 /*
@@ -122,23 +150,12 @@ nav li a:hover {
   display: flex;
   padding-top: 6rem;
   padding-bottom: 10rem;
-  font-family: "Nunito", sans-serif;
   text-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 /* Restrict width on titles */
 .hero hgroup {
   max-width: 400px;
-}
-
-/* Title/subtitle styling */
-.hero hgroup h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero hgroup h2 {
-  font-size: 1.5rem;
 }
 
 /*
@@ -163,8 +180,8 @@ Statistic section
 .stats {
   color: var(--text-dark);
   background-color: var(--bg-dark);
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-top: var(--section-spacing);
+  padding-bottom: var(--section-spacing);
 }
 
 .stats .row {
@@ -173,7 +190,7 @@ Statistic section
 
 .stats h1 {
   margin-bottom: 1rem;
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .stats .col {
@@ -181,4 +198,20 @@ Statistic section
   align-items: center;
   text-align: center;
   max-width: 15rem;
+}
+
+/*
+* Info section
+*/
+
+.info .text {
+  flex: 1;
+}
+
+.info div:first-child {
+  margin-right: var(--spacing);
+}
+
+.info .row {
+  margin-bottom: var(--section-spacing);
 }
