@@ -27,7 +27,7 @@ Author: John-Allan Lambert
   /* Colors dark */
   --text-dark: white;
   --accent-dark: #00a6fb;
-  --bg-dark: #051923;
+  --bg-dark: #031016;
 
   /* Spacing */
   --section-spacing: 6rem;
@@ -70,7 +70,7 @@ h2 {
 }
 
 /*
-* Elements
+* random shit go here
 */
 .rounded {
   border-radius: 0.5rem;
@@ -103,43 +103,53 @@ footer {
 /*
 * Navbar 
 */
-nav,
-nav ul,
-nav ul li {
-  display: flex;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; /* Make sure the navbar stays on top of other elements */
 }
 
-nav {
+nav .container {
+  display: flex;
+  color: var(--text-dark);
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
+
+  transition: background-color 0.3s ease;
+}
+
+nav .navbar-solid {
+  color: black;
+  background-color: white;
 }
 
 /* Reset default styling on lists */
-nav ul {
+nav .container ul {
   list-style-type: none;
 }
 
-/* Verticially center nav items */
-nav li {
-  align-items: center;
+/* Position nav items correctly*/
+nav .container li {
+  display: inline;
 }
 
 /* Padding betweeen nav items */
-nav li:not(:last-of-type) {
+nav .container li:not(:last-of-type) {
   padding-right: 1rem;
 }
 
 /* Reset default styling on links */
-nav li a:link,
-nav li a:visited {
+nav .container li a {
   color: inherit;
   text-decoration: none;
 }
 
 /* Underline links on hover */
-nav li a:hover {
+nav .container li a:hover {
   text-decoration: underline;
 }
 
@@ -148,7 +158,7 @@ nav li a:hover {
 */
 .hero {
   display: flex;
-  padding-top: 6rem;
+  padding-top: 10rem;
   padding-bottom: 10rem;
   text-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -178,6 +188,7 @@ nav li a:hover {
 Statistic section
 */
 .stats {
+  /* now this is how you write clean css */
   color: var(--text-dark);
   background-color: var(--bg-dark);
   padding-top: var(--section-spacing);
@@ -185,6 +196,7 @@ Statistic section
 }
 
 .stats .row {
+  /* center columns except for first and last columns */
   justify-content: space-between;
 }
 
