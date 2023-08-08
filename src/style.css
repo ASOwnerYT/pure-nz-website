@@ -208,10 +208,19 @@ Statistic section
 }
 
 .stats .col {
+  margin: auto;
+  margin-bottom: var(--spacing);
   justify-content: center;
   align-items: center;
   text-align: center;
   max-width: 15rem;
+}
+
+@media (min-width: 576px) {
+  .stats .col {
+    margin: 0;
+    margin-bottom: var(--spacing);
+  }
 }
 
 /*
