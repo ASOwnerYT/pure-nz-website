@@ -193,8 +193,8 @@ Statistic section
   /* now this is how you write clean css */
   color: var(--text-dark);
   background-color: var(--bg-dark);
-  padding-top: var(--section-spacing);
-  padding-bottom: var(--section-spacing);
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
 }
 
 .stats .row {
@@ -204,7 +204,7 @@ Statistic section
 
 .stats h1 {
   margin-bottom: 1rem;
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .stats .col {
