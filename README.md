@@ -3,5 +3,5 @@
 
 ## Instructions
 1. [Click here to download as ZIP](https://github.com/ASOwnerYT/pure-nz-website/archive/refs/heads/master.zip)
-2. Extract the ZIP file into a folder
+2. Extract the ZIP file
 3. Open `index.html` in a web browser (Chrome or Firefox is recommended and tested)
