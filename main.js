@@ -7,9 +7,9 @@ window.addEventListener("scroll", function () {
   // If scrolled to top, make navbar transparent and update logo, otherwise make solid
   if (scrollPosition === 0) {
     navbar.classList.remove("navbar-solid"); // Make navbar transparent
-    logo.src = "/logo.png"; // Change logo to light theme
+    logo.src = "./public/logo.png"; // Change logo to light theme
   } else {
     navbar.classList.add("navbar-solid"); // Make navbar solid
-    logo.src = "/logo-dark.png"; // Change logo to dark theme
+    logo.src = "./public/logo-dark.png"; // Change logo to dark theme
   }
 });

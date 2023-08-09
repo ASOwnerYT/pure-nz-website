@@ -85,7 +85,7 @@ h2 {
 header {
   color: var(--text-dark);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("/pexels-photo-2586067.jpeg");
+    url("./public/pexels-photo-2586067.jpeg");
   background-size: cover;
   background-position: center;
 }
