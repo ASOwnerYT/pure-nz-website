@@ -19,19 +19,23 @@ Author: John-Allan Lambert
 :root {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
+  /* Colours */
+  --accent: #01aaff;
+
   /* Colours light */
   --text-light: black;
-  --accent-light: #00a6fb;
   --bg-light: white;
 
   /* Colors dark */
   --text-dark: white;
-  --accent-dark: #00a6fb;
   --bg-dark: #031016;
 
   /* Spacing */
   --section-spacing: 6rem;
   --spacing: 3rem;
+
+  /* Misc */
+  --transition: 0.2s ease-in-out;
 }
 
 /* Typography */
@@ -48,6 +52,20 @@ h1 {
 h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+a,
+[role="link"] {
+  color: var(--accent);
+
+  text-decoration: none;
+  -webkit-text-decoration: none;
+}
+
+a:hover,
+[role="link"] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline;
 }
 
 /*
@@ -70,18 +88,23 @@ h2 {
 }
 
 /*
-* random shit go here
+* Misc styling
 */
 .rounded {
   border-radius: 0.5rem;
+}
+
+.shadow {
   box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0px 0px 24px -12px rgba(0, 0, 0, 0.5);
+
+  transition: box-shadow var(--transition), -webkit-box-shadow var(--transition);
 }
 
 /*
 * Sections
 */
-/* Header section (navbar and hero) */
+/* Header section (hero) */
 header {
   color: var(--text-dark);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -90,8 +113,9 @@ header {
   background-position: center;
 }
 
-/* Section (adds spacing to bottom) */
-section {
+/* Add spacing to bottom of sections */
+section,
+main {
   margin-bottom: var(--section-spacing);
 }
 
@@ -121,12 +145,12 @@ nav .container {
   padding-top: 1rem;
   padding-bottom: 1rem;
 
-  transition: background-color 0.3s ease;
+  transition: background-color var(--transition);
 }
 
 nav .navbar-solid {
-  color: black;
-  background-color: white;
+  color: var(--text-light);
+  background-color: var(--bg-light);
 }
 
 /* Reset default styling on lists */
@@ -227,14 +251,40 @@ Statistic section
 * Info section
 */
 
+/* Make text fill up the space */
 .info .text {
   flex: 1;
 }
 
-.info div:first-child {
-  margin-right: var(--spacing);
+/*  For every odd (even starting from 0) row, 
+reverse the row direction so that the image is on the right */
+.info > .row:nth-child(even) {
+  flex-flow: row-reverse wrap;
 }
 
+/* Bottom margin seperating the rows */
 .info .row {
   margin-bottom: var(--section-spacing);
+}
+
+/* On mobile, make image fill width and add spacing on bottom */
+.info .row .col img {
+  width: 100%;
+  margin-bottom: var(--spacing);
+}
+
+/* Screens larger than mobile */
+@media (min-width: 576px) {
+  /* Image size and margin */
+  .info .row .col img {
+    width: 480px;
+    margin-right: var(--spacing);
+    margin-bottom: 0;
+  }
+
+  /* Margin for images inside a row that is reversed*/
+  .info > .row:nth-child(even) > .col:first-of-type > img {
+    margin-left: var(--spacing);
+    margin-right: 0;
+  }
 }
