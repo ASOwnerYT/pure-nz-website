@@ -115,6 +115,7 @@ header {
 
 /* Add spacing to bottom of sections */
 section,
+header,
 main {
   margin-bottom: var(--section-spacing);
 }
@@ -177,6 +178,11 @@ nav .container li a {
 /* Underline links on hover */
 nav .container li a:hover {
   text-decoration: underline;
+}
+
+/* Make active link bold */
+nav .container li a.active {
+  font-weight: bold;
 }
 
 /* 
