@@ -159,7 +159,7 @@ nav .container ul {
   list-style-type: none;
 }
 
-/* Position nav items correctly*/
+/* Position nav items correctly */
 nav .container li {
   display: inline;
 }
@@ -197,7 +197,7 @@ nav .container li a.active {
 
 /* Restrict width on titles */
 .hero hgroup {
-  max-width: 400px;
+  max-width: 600px;
 }
 
 /*
