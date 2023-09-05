@@ -268,10 +268,14 @@ reverse the row direction so that the image is on the right */
   flex-flow: row-reverse wrap;
 }
 
+/* no one reads these anyway so im just going to say i have ligma */
+
 /* Bottom margin seperating the rows */
 .info .row {
   margin-bottom: var(--section-spacing);
 }
+
+/* ligma balls haha */
 
 /* On mobile, make image fill width and add spacing on bottom */
 .info .row .col img {
@@ -288,7 +292,7 @@ reverse the row direction so that the image is on the right */
     margin-bottom: 0;
   }
 
-  /* Margin for images inside a row that is reversed*/
+  /* Margin for images inside a row that is reversed */
   .info > .row:nth-child(even) > .col:first-of-type > img {
     margin-left: var(--spacing);
     margin-right: 0;
