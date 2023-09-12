@@ -136,22 +136,22 @@ nav {
   left: 0;
   right: 0;
   z-index: 100; /* Make sure the navbar stays on top of other elements */
+
+  color: var(--text-dark);
+  transition: background-color var(--transition);
+}
+
+.navbar-solid {
+  color: var(--text-light);
+  background-color: var(--bg-light);
 }
 
 nav .container {
   display: flex;
-  color: var(--text-dark);
   justify-content: space-between;
   align-items: center;
   padding-top: 1rem;
   padding-bottom: 1rem;
-
-  transition: background-color var(--transition);
-}
-
-nav .navbar-solid {
-  color: var(--text-light);
-  background-color: var(--bg-light);
 }
 
 /* Reset default styling on lists */
