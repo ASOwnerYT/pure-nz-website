@@ -17,16 +17,23 @@ Author: John-Allan Lambert
 * Body (root)
 */
 :root {
+  /* Fonts */
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-  /* Colours */
+  /* 
+  These are variables that can be used anywhere in the CSS
+  Example of usage: background-color: var(--bg-light);
+  In this example the background would be white as --bg-light is set to white here
+  */
+
+  /* Colours (any theme)*/
   --accent: #01aaff;
 
-  /* Colours light */
+  /* Colours for light theme */
   --text-light: black;
   --bg-light: white;
 
-  /* Colors dark */
+  /* Colours for dark theme */
   --text-dark: white;
   --bg-dark: #031016;
 
@@ -38,7 +45,9 @@ Author: John-Allan Lambert
   --transition: 0.2s ease-in-out;
 }
 
-/* Typography */
+/* 
+* Typography 
+*/
 h1,
 h2 {
   font-family: "Nunito", sans-serif;
@@ -54,6 +63,7 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+/* Links */
 a,
 [role="link"] {
   color: var(--accent);
@@ -62,6 +72,7 @@ a,
   -webkit-text-decoration: none;
 }
 
+/* Underline links when hovered */
 a:hover,
 [role="link"] {
   text-decoration: underline;
@@ -70,6 +81,7 @@ a:hover,
 
 /*
 * Constrained container
+* This centeres elements horizontally and constrains the width so that elements are aligned (like a margin)
 */
 .container {
   margin-left: auto;
@@ -80,6 +92,7 @@ a:hover,
   position: relative;
 }
 
+/* Desktop */
 @media (min-width: 920px) {
   .container {
     padding-left: 70px;
@@ -131,6 +144,7 @@ footer {
 * Navbar 
 */
 nav {
+  /* Make navbar stay at top of screen (static) */
   position: fixed;
   top: 0;
   left: 0;
@@ -268,14 +282,10 @@ reverse the row direction so that the image is on the right */
   flex-flow: row-reverse wrap;
 }
 
-/* no one reads these anyway so im just going to say i have ligma */
-
 /* Bottom margin seperating the rows */
 .info .row {
   margin-bottom: var(--section-spacing);
 }
-
-/* ligma balls haha */
 
 /* On mobile, make image fill width and add spacing on bottom */
 .info .row .col img {
