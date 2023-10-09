@@ -3,7 +3,7 @@ const logo = document.getElementById("logo"); // Logo
 let scrollPosition = 0; // Scroll position
 
 // Make navbar solid on scroll and update logo to light/dark theme
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   scrollPosition = window.scrollY || document.documentElement.scrollTop; // Current scroll position
 
   // If scrolled to top, make navbar transparent and update logo, otherwise make solid
