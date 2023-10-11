@@ -63,6 +63,16 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+p,
+.text ul {
+  margin-bottom: 1rem;
+}
+
+/* Add margin to lists */
+.text ul {
+  margin-left: 3rem;
+}
+
 /* Links */
 a,
 [role="link"] {
