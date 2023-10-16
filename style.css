@@ -70,7 +70,7 @@ p,
 
 /* Add margin to lists */
 .text ul {
-  margin-left: 3rem;
+  margin-left: 1.5rem;
 }
 
 /* Links */
@@ -133,7 +133,7 @@ a:hover,
 header {
   color: var(--text-dark);
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./public/pexels-photo-2586067.jpeg");
+    url("./public/pexels-photo-2586067.webp");
   background-size: cover;
   background-position: center;
 }
