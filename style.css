@@ -27,7 +27,7 @@ Author: John-Allan Lambert
   */
 
   /* Colours (any theme)*/
-  --accent: #01aaff;
+  --accent: #33bbff;
 
   /* Colours for light theme */
   --text-light: black;
@@ -35,7 +35,7 @@ Author: John-Allan Lambert
 
   /* Colours for dark theme */
   --text-dark: white;
-  --bg-dark: #031016;
+  --bg-dark: #020d12;
 
   /* Spacing */
   --section-spacing: 6rem;
