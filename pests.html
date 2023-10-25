@@ -25,20 +25,35 @@
       href="./public/favicon-16x16.png"
     />
     <link rel="manifest" href="./public/site.webmanifest" />
+
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/f9c4247f34.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <!-- Navbar -->
     <nav id="navbar">
       <div class="container">
-        <ul>
-          <li>
+        <div class="navbar-header">
+          <div>
             <a href="./index.html">
-              <img src="./public/logo.webp" id="logo" height="32px" alt="Logo" />
+              <img
+                src="./public/logo.webp"
+                id="logo"
+                height="32px"
+                alt="Logo"
+              />
             </a>
-          </li>
-        </ul>
-        <ul>
+          </div>
+
+          <div id="menu-toggle" class="menu-icon">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+        </div>
+        <ul class="navbar-links">
           <li><a href="./index.html">Home</a></li>
           <li><a href="./pollution.html">Pollution</a></li>
           <li><a href="./weeds.html">Freshwater weeds</a></li>

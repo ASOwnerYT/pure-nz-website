@@ -27,7 +27,7 @@ Author: John-Allan Lambert
   */
 
   /* Colours (any theme)*/
-  --accent: #01aaff;
+  --accent: #33bbff;
 
   /* Colours for light theme */
   --text-light: black;
@@ -35,7 +35,7 @@ Author: John-Allan Lambert
 
   /* Colours for dark theme */
   --text-dark: white;
-  --bg-dark: #031016;
+  --bg-dark: #020d12;
 
   /* Spacing */
   --section-spacing: 6rem;
@@ -161,7 +161,8 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100; /* Make sure the navbar stays on top of other elements */
+  z-index: 100;
+  /* Make sure the navbar stays on top of other elements */
 
   color: var(--text-dark);
   transition: background-color var(--transition);
@@ -170,14 +171,6 @@ nav {
 .navbar-solid {
   color: var(--text-light);
   background-color: var(--bg-light);
-}
-
-nav .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 /* Reset default styling on lists */
@@ -209,6 +202,77 @@ nav .container li a:hover {
 /* Make active link bold */
 nav .container li a.active {
   font-weight: bold;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+}
+
+/* Add styles for mobile view */
+@media (max-width: 500px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    background-color: var(--bg-light);
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    font-size: 1rem;
+  }
+
+  .navbar-links {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar-links li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+/* Styles for desktop view */
+@media (min-width: 501px) {
+  .navbar-links {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  #navbar .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.navbar-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* 
@@ -290,7 +354,7 @@ Statistic section
 
 /*  For every odd (even starting from 0) row, 
 reverse the row direction so that the image is on the right */
-.info > .row:nth-child(even) {
+.info>.row:nth-child(even) {
   flex-flow: row-reverse wrap;
 }
 
@@ -307,6 +371,7 @@ reverse the row direction so that the image is on the right */
 
 /* Screens larger than mobile */
 @media (min-width: 576px) {
+
   /* Image size and margin */
   .info .row .col img {
     width: 480px;
@@ -315,7 +380,7 @@ reverse the row direction so that the image is on the right */
   }
 
   /* Margin for images inside a row that is reversed */
-  .info > .row:nth-child(even) > .col:first-of-type > img {
+  .info>.row:nth-child(even)>.col:first-of-type>img {
     margin-left: var(--spacing);
     margin-right: 0;
   }
